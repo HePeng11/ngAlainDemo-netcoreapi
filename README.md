@@ -14,3 +14,5 @@
 ![image](https://github.com/HePeng11/ngAlainDemo-netcoreapi/blob/master/snapshots/role.PNG)
 ![image](https://github.com/HePeng11/ngAlainDemo-netcoreapi/blob/master/snapshots/acl.PNG)
 ![image](https://github.com/HePeng11/ngAlainDemo-netcoreapi/blob/master/snapshots/aclmanage.PNG)
+
+管理员账号:admin 123456 请勿删改权限码和用户数据，多谢
