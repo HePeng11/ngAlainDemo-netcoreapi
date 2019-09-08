@@ -19,10 +19,10 @@ export const SCHEMA_THIRDS_COMPONENTS = [
 ];
 
 @NgModule({
-  entryComponents: [...SCHEMA_THIRDS_COMPONENTS],
-  declarations: [...SCHEMA_THIRDS_COMPONENTS],
+  entryComponents: SCHEMA_THIRDS_COMPONENTS,
+  declarations: SCHEMA_THIRDS_COMPONENTS,
   imports: [SharedModule, DelonFormModule.forRoot()],
-  exports: [...SCHEMA_THIRDS_COMPONENTS],
+  exports: SCHEMA_THIRDS_COMPONENTS,
 })
 export class JsonSchemaModule {
   constructor(widgetRegistry: WidgetRegistry) {

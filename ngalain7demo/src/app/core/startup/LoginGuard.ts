@@ -16,7 +16,13 @@ export class AuthGuard implements CanActivateChild {
       return false;
     }
     const path = this.menuService.getPathByUrl(state.url);
-    if (path.length === 0 && state.url.indexOf('/exception/') !== 0) {
+    const ignorePaths = ['/exception/', '/dashboard'];
+    if (path.length === 0 && ignorePaths.every((f) => {
+      if (state.url.indexOf(f) !== 0) {
+        return true;
+      }
+      return false;
+    })) {
       return false;
     }
     return true;
