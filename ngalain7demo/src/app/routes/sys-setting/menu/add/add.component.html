@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <div class="modal-title">
+    <i nz-icon nzType="home-page" nzTheme="outline"></i>
+    {{ this.record.id>0?'编辑菜单-'+record.text:'新增菜单' }}
+  </div>
+</div>
+<sf *ngIf="record" #sf mode="edit" [schema]="schema" [ui]="ui" [formData]="record" button="none">
+  <div class="modal-footer">
+    <button nz-button type="button" (click)="close()">关闭</button>
+    <button nz-button type="submit" nzType="primary" (click)="save(sf.value)" [disabled]="!sf.valid"
+      [nzLoading]="http.loading">保存</button>
+  </div>
+</sf>

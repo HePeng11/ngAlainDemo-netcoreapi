@@ -1,0 +1,16 @@
+﻿using HePeng.Personal.Common.APIExts;
+using HePeng.Personal.Model.Dto;
+using HePeng.Personal.Model.Dto.QueryParams;
+using HePeng.Personal.Model.Entity;
+using System;
+
+namespace HePeng.Personal.Repository.Interface
+{
+    /// <summary>
+    /// {{Scope_Description}}仓储层接口
+    /// </summary>
+    public interface I{{Scope_Name}}Repository : IBaseRepository<{{Scope_Name}},QueryParam>, IScopeInject
+    {
+
+    }
+}

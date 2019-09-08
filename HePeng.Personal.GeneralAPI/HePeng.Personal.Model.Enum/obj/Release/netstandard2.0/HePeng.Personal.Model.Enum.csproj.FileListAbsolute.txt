@@ -1,0 +1,9 @@
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\bin\Release\netstandard2.0\HePeng.Personal.Model.Enum.deps.json
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\bin\Release\netstandard2.0\HePeng.Personal.Model.Enum.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\bin\Release\netstandard2.0\HePeng.Personal.Model.Enum.pdb
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.csprojAssemblyReference.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.csproj.CoreCompileInputs.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.AssemblyInfoInputs.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.AssemblyInfo.cs
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Enum\obj\Release\netstandard2.0\HePeng.Personal.Model.Enum.pdb

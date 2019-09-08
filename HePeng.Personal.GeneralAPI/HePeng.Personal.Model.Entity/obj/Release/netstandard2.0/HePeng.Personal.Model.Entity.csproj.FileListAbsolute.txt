@@ -1,0 +1,14 @@
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\HePeng.Personal.Model.Entity.deps.json
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\HePeng.Personal.Model.Entity.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\HePeng.Personal.Model.Entity.pdb
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\HePeng.Personal.Model.Enum.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\SqlSugar.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\HePeng.Personal.Model.Enum.pdb
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\bin\Release\netstandard2.0\SqlSugar.pdb
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.csprojAssemblyReference.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.csproj.CoreCompileInputs.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.AssemblyInfoInputs.cache
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.AssemblyInfo.cs
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.csproj.CopyComplete
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.dll
+C:\projects\remoteSvn\HePeng.Personal.GeneralAPI\HePeng.Personal.Model.Entity\obj\Release\netstandard2.0\HePeng.Personal.Model.Entity.pdb

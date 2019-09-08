@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <div class="modal-title">
+    <i nz-icon nzType="team" nzTheme="outline"></i>用户</div>
+</div>
+<div class="my-md">
+  <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+    <button type="submit" [nzType]="'primary'" nz-button><i nz-icon type="search"></i>搜索</button>
+    <button type="reset" (click)="restSfSt()" nzShape="round" nz-button>重置</button>
+  </sf>
+</div>
+<nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzFrontPagination]="false" [nzData]="listOfData" [nzShowTotal]="showTotalTpl"
+  [nzLoading]="loading" [nzTotal]="total" [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize"
+  (nzPageIndexChange)="searchData()" (nzPageSizeChange)="searchData(true)" [nzScroll]="{ x: '800px',y:'400px' }">
+  <thead>
+    <tr>
+      <th nzWidth="5%" nzShowCheckbox (nzCheckedChange)="checkAll($event)" [nzIndeterminate]="isIndeterminate"
+        [(nzChecked)]="isAllDataChecked"></th>
+      <th nzWidth="5%">No</th>
+      <th nzWidth="10%">用户名</th>
+      <th nzWidth="10%">头像</th>
+      <th nzWidth="10%">姓名</th>
+      <th nzWidth="10%">性别</th>
+      <th nzWidth="10%">出生日期</th>
+      <th nzWidth="20%">电话号码</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of ajaxTable.data;let i=index">
+      <td nzShowCheckbox [(nzChecked)]="checkedIds[data.id]" (nzCheckedChange)="refreshThStatus($event,data.id)"></td>
+      <td>{{ pageNo+i }}</td>
+      <td>{{ data.account }}</td>
+      <td>
+        <img [src]="data.headImgUrl" />
+      </td>
+      <td>
+        <ellipsis length="10" tooltip>{{ data.name }}</ellipsis>
+      </td>
+      <td>{{ data.gender }}</td>
+      <td>{{ data.birthday | date:'yyyy-MM-dd' }}</td>
+      <td>{{ data.phone }}</td>
+    </tr>
+  </tbody>
+</nz-table>
+<div class="modal-footer">
+  <button nz-button type="button" (click)="close()">关闭</button>
+  <button nz-button type="submit" nzType="primary" [disabled]="!canSave()" (click)="save()">确认</button>
+</div>
+<ng-template #showTotalTpl let-range="range" let-total>
+  {{ range[0] }}-{{ range[1] }} / {{ total }}
+</ng-template>

@@ -1,0 +1,38 @@
+<page-header [action]="phActionTpl">
+  <ng-template #phActionTpl>
+    <button nz-button nzType="primary">新建</button>
+  </ng-template>
+</page-header>
+
+
+<nz-card>
+    <nz-table
+    #ajaxTable
+    nzShowSizeChanger
+    [nzFrontPagination]="false"
+    [nzData]="listOfData"
+    [nzLoading]="loading"
+    [nzTotal]="total"
+    [(nzPageIndex)]="pageIndex"
+    [(nzPageSize)]="pageSize"
+    (nzPageIndexChange)="searchData()"
+    (nzPageSizeChange)="searchData(true)"
+    [nzPageSizeOptions]="[10,20,30]"
+    [nzShowQuickJumper]="true"
+  >
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
+      <tr>
+        <th nzShowSort nzSortKey="name">no</th>
+        <th nzShowFilter [nzFilters]="filterGender" (nzFilterChange)="updateFilter($event)">callNo</th>
+        <th nzShowSort nzSortKey="email"><span>description</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of ajaxTable.data">
+        <td>{{ data.no }} </td>
+        <td>{{ data.callNo }}</td>
+        <td>{{ data.description }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</nz-card>

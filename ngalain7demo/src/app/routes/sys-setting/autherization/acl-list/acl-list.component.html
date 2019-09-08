@@ -1,0 +1,58 @@
+<page-header [title]="'基础权限配置 仅供开发人员使用'" autoTitle="false"></page-header>
+
+<div style="min-width: 1000px">
+  <nz-card>
+    <div class="my-md">
+      <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+        <button type="button" (click)="addCategory({})" nzType="primary" class="primary-bg-add" acl [acl-ability]="ability_CUD" nz-button>
+          <i nz-icon type="plus"></i>新建</button>
+      </sf>
+    </div>
+    <nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzShowTotal]="showTotalTpl"
+      [nzFrontPagination]="false" [nzData]="listOfData" [nzLoading]="loading" [nzTotal]="totol"
+      [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize" (nzPageIndexChange)="searchData()"
+      (nzPageSizeChange)="searchData(true)">
+      <thead>
+        <tr>
+          <th nzWidth="2%"></th>
+          <th nzWidth="15%">
+            ACL类别
+          </th>
+          <th nzWidth="60%">ACL (Access Control List Category 访问控制列表)</th>
+          <th nzWidth="10%" acl [acl-ability]="ability_CUD">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of ajaxTable.data;let i=index">
+          <td>{{ pageNo+i }}</td>
+          <td nz-tooltip [nzTitle]="titleTemplate" nzPlacement="topLeft">
+            <a href="###" (click)="addCategory(data)">{{ data.name }} </a>{{ data.code }}
+          </td>
+          <td>
+            <nz-tag *ngFor="let acl of data.acLs;" [nzMode]="'closeable'" [nzColor]="'#87d068'"
+              (nzOnClose)="deleteACL(acl,$event)" [ngClass]="'mt-xs'" nz-tooltip [nzTitle]="ACtemplate">
+              <span (click)="addACL(data,acl)">{{ acl.name }}</span>
+              <ng-template #ACtemplate>
+                <span>编码：{{acl.code}}</span>
+                <span *ngIf="acl.description&&acl.description.length>0"><br/>{{acl.description}}</span>
+              </ng-template>
+            </nz-tag>
+            <nz-tag class="editable-tag" nzNoAnimation (click)="addACL(data,{})" acl [acl-ability]="ability_CUD">
+              <i nz-icon type="plus"></i> New AC
+            </nz-tag>
+          </td>
+          <td acl [acl-ability]="ability_CUD">
+            <a href="###" (click)="deleteCategory(data)"><i nz-icon nzType="delete" nzTheme="fill"></i> Delete</a>
+          </td>
+          <ng-template #titleTemplate>
+            <span>名称：{{data.name}} </span>
+            <span class="ml-sm">编码：{{data.code}}</span>
+          </ng-template>
+        </tr>
+      </tbody>
+      <ng-template #showTotalTpl let-range="range" let-total>
+        {{ range[0] }}-{{ range[1] }} / {{ total }}
+      </ng-template>
+    </nz-table>
+  </nz-card>
+</div>

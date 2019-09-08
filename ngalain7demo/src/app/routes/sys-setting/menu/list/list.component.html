@@ -1,0 +1,54 @@
+<page-header></page-header>
+<nz-card>
+  <div class="my-md">
+    <button (click)="add({})" nzType="primary" class="primary-bg-add" acl [acl-ability]="ability_CUD" nz-button>
+      <i nz-icon type="plus"></i>新建</button>
+  </div>
+
+  <nz-table #expandTable [nzData]="listOfMapData" nzSize="small" nzShowSizeChanger nzBordered
+    [nzFrontPagination]="false" [nzLoading]="loading" [nzTotal]="total" [(nzPageIndex)]="pageIndex"
+    [(nzPageSize)]="pageSize" (nzPageIndexChange)="searchData()" (nzPageSizeChange)="searchData(true)"
+    [nzPageSizeOptions]="[10,20,30]" [nzShowQuickJumper]="true" [nzScroll]="{ x: '850px' }">
+    <thead>
+      <tr>
+        <th nzWidth="10px"></th>
+        <th>Text</th>
+        <th>Link</th>
+        <th>IsExternalLink</th>
+        <th>Icon</th>
+        <th>Disabled</th>
+        <th>ShowOrder</th>
+        <th>AclCode</th>
+        <th acl [acl-ability]="ability_CUD">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let data of expandTable.data;let i=index">
+        <ng-container *ngFor="let item of mapOfExpandedData[data.key];let j=index">
+          <tr *ngIf="(item.parent && item.parent.expand) || !item.parent">
+            <td *ngIf="item.parentId===0">{{pageSize*(pageIndex-1)+i+1}}</td>
+            <td *ngIf="item.parentId!==0"></td>
+            <td [nzIndentSize]="item.level*20" [nzShowExpand]="!!item.children" [(nzExpand)]="item.expand"
+              (nzExpandChange)="collapse(mapOfExpandedData[data.key], item, $event)">
+              <label class="pr-md" *ngIf="item.parentId!==0">{{item.order}}</label>
+              {{ item.text }}
+            </td>
+            <td>{{ item.link }}</td>
+            <td *ngIf="item.parentId!==0" nzShowCheckbox [nzDisabled]="true" nzChecked="{{item.isExternalLink}}"></td>
+            <td *ngIf="item.parentId===0"></td>
+            <td><i nz-icon nzType="{{item.icon}}" nzTheme="outline"></i></td>
+            <td *ngIf="item.parentId!==0" nzShowCheckbox [nzDisabled]="true" nzChecked="{{item.disabled}}"></td>
+            <td *ngIf="item.parentId===0"></td>
+            <td>{{ item.showOrder }}</td>
+            <td>{{ item.aclCode }}</td>
+            <td acl [acl-ability]="ability_CUD">
+              <a href="###" (click)="add(item)"><i nz-icon nzType="edit" nzTheme="fill"></i> Edit</a>
+              <nz-divider nzType="vertical"></nz-divider>
+              <a href="###" (click)="delete(item)"><i nz-icon nzType="delete" nzTheme="fill"></i> Delete</a>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </nz-table>
+</nz-card>

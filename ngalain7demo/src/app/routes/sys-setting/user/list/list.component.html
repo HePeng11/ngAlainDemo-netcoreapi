@@ -1,0 +1,59 @@
+<page-header [title]="null" autoTitle="false"></page-header>
+
+<nz-card>
+  <div class="my-md">
+    <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+      <button type="submit" [nzType]="'primary'" nz-button><i nz-icon type="search"></i>搜索</button>
+      <button type="reset" (click)="restSfSt()" nzShape="round" nz-button>重置</button>
+      <button type="button" (click)="add({})" nzType="primary" class="primary-bg-add" acl [acl-ability]="ability_CUD"
+        nz-button>
+        <i nz-icon type="plus"></i>新建</button>
+    </sf>
+  </div>
+  <nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger nzShowQuickJumper="true" [nzShowTotal]="showTotalTpl"
+    [nzFrontPagination]="false" [nzData]="listOfData" [nzLoading]="loading" [nzTotal]="totol"
+    [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize" (nzPageIndexChange)="searchData()"
+    (nzPageSizeChange)="searchData(true)" [nzScroll]="{ x: '800px' }">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
+      <tr>
+        <th></th>
+        <th>Account</th>
+        <th>HeadImg</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+        <th>Phone</th>
+        <th>Adress</th>
+        <th acl [acl-ability]="ability_CUD">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of ajaxTable.data;let i=index">
+        <td>{{ pageNo+i }}</td>
+        <td>{{ data.account }}</td>
+        <td>
+          <img [class]="'user_'+data.id" (click)="changeHeadImg(data.id)" [src]="data.headImgUrl" />
+        </td>
+        <td>
+          <ellipsis length="10" tooltip>{{ data.name }}</ellipsis>
+        </td>
+        <td>{{ data.gender }}</td>
+        <td>{{ data.birthday | date:'yyyy-MM-dd' }}</td>
+        <td>{{ data.phone }}</td>
+        <td>
+          <ellipsis length="10" tooltip>{{ data.adress }}</ellipsis>
+        </td>
+        <td acl [acl-ability]="ability_CUD">
+          <a href="###" (click)="add(data)"><i nz-icon nzType="edit" nzTheme="fill"></i> Edit</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a href="###" (click)="delete(data)"><i nz-icon nzType="delete" nzTheme="fill"></i> Delete</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a href="###" (click)="changePassword(data)"><i nz-icon nzType="ngZorro_safety" nzTheme="outline"></i>更改密码</a>
+        </td>
+      </tr>
+    </tbody>
+    <ng-template #showTotalTpl let-range="range" let-total>
+      {{ range[0] }}-{{ range[1] }} / {{ total }}
+    </ng-template>
+  </nz-table>
+</nz-card>

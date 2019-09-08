@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.GeneralAPI", "HePeng.Personal.GeneralAPI\HePeng.Personal.GeneralAPI.csproj", "{6D9DE731-B3C5-473B-84E9-2D17FD21E67B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Common", "HePeng.Personal.Common\HePeng.Personal.Common.csproj", "{3764EAB2-0334-4511-8D59-B1708D86089A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PluginResources", "PluginResources", "{23F745D8-7DA9-4ECC-BF04-3D253AF0C072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{DE019940-ABB4-492D-BE99-EFD03E5767F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HePeng.Personal.Service", "HePeng.Personal.Service", "{292B4B6C-EE17-47FE-838F-30BC3BD66638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HePeng.Personal.Repository", "HePeng.Personal.Repository", "{EF90D352-45F2-4AFD-A6B0-E13BD9AC2A4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Repository.Implement", "HePeng.Personal.Repository.Implement\HePeng.Personal.Repository.Implement.csproj", "{7CE96932-0904-48D3-836F-6056316428BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Repository.Interface", "HePeng.Personal.Repository.Interface\HePeng.Personal.Repository.Interface.csproj", "{1D963A6F-7CCE-416A-B346-58710A087DC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Service.Implement", "HePeng.Personal.Service.Implement\HePeng.Personal.Service.Implement.csproj", "{FF90BF20-785E-4CA8-8530-FF38441AF25E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Service.Interface", "HePeng.Personal.Service.Interface\HePeng.Personal.Service.Interface.csproj", "{BD9E69DF-14A6-4C04-A884-838CCB470439}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HePeng.Personal.Model", "HePeng.Personal.Model", "{2DD474CA-AEE3-47C5-AAE4-0BBC9EC1E20C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Model.Dto", "HePeng.Personal.Model.Dto\HePeng.Personal.Model.Dto.csproj", "{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Model.Entity", "HePeng.Personal.Model.Entity\HePeng.Personal.Model.Entity.csproj", "{60A63E56-9A3A-4167-BA45-7ABBF3B36663}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HePeng.Personal.Model.Enum", "HePeng.Personal.Model.Enum\HePeng.Personal.Model.Enum.csproj", "{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HePeng.Personal.Support", "HePeng.Personal.Support", "{515DB732-0B80-43BF-9B99-447CD43D8ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HePeng.Personal.GeneralAPI.CodeGenerator", "HePeng.Personal.GeneralAPI.CodeGenerator\HePeng.Personal.GeneralAPI.CodeGenerator.csproj", "{C741C17E-469E-4AF3-B48F-F8ABB76C01F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D9DE731-B3C5-473B-84E9-2D17FD21E67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9DE731-B3C5-473B-84E9-2D17FD21E67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9DE731-B3C5-473B-84E9-2D17FD21E67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9DE731-B3C5-473B-84E9-2D17FD21E67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3764EAB2-0334-4511-8D59-B1708D86089A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3764EAB2-0334-4511-8D59-B1708D86089A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3764EAB2-0334-4511-8D59-B1708D86089A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3764EAB2-0334-4511-8D59-B1708D86089A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE019940-ABB4-492D-BE99-EFD03E5767F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE019940-ABB4-492D-BE99-EFD03E5767F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE019940-ABB4-492D-BE99-EFD03E5767F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE019940-ABB4-492D-BE99-EFD03E5767F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE96932-0904-48D3-836F-6056316428BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE96932-0904-48D3-836F-6056316428BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE96932-0904-48D3-836F-6056316428BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE96932-0904-48D3-836F-6056316428BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D963A6F-7CCE-416A-B346-58710A087DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D963A6F-7CCE-416A-B346-58710A087DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D963A6F-7CCE-416A-B346-58710A087DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D963A6F-7CCE-416A-B346-58710A087DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF90BF20-785E-4CA8-8530-FF38441AF25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF90BF20-785E-4CA8-8530-FF38441AF25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF90BF20-785E-4CA8-8530-FF38441AF25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF90BF20-785E-4CA8-8530-FF38441AF25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9E69DF-14A6-4C04-A884-838CCB470439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9E69DF-14A6-4C04-A884-838CCB470439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9E69DF-14A6-4C04-A884-838CCB470439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9E69DF-14A6-4C04-A884-838CCB470439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A63E56-9A3A-4167-BA45-7ABBF3B36663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A63E56-9A3A-4167-BA45-7ABBF3B36663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A63E56-9A3A-4167-BA45-7ABBF3B36663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A63E56-9A3A-4167-BA45-7ABBF3B36663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C741C17E-469E-4AF3-B48F-F8ABB76C01F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C741C17E-469E-4AF3-B48F-F8ABB76C01F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C741C17E-469E-4AF3-B48F-F8ABB76C01F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C741C17E-469E-4AF3-B48F-F8ABB76C01F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE019940-ABB4-492D-BE99-EFD03E5767F3} = {23F745D8-7DA9-4ECC-BF04-3D253AF0C072}
+		{7CE96932-0904-48D3-836F-6056316428BB} = {EF90D352-45F2-4AFD-A6B0-E13BD9AC2A4B}
+		{1D963A6F-7CCE-416A-B346-58710A087DC7} = {EF90D352-45F2-4AFD-A6B0-E13BD9AC2A4B}
+		{FF90BF20-785E-4CA8-8530-FF38441AF25E} = {292B4B6C-EE17-47FE-838F-30BC3BD66638}
+		{BD9E69DF-14A6-4C04-A884-838CCB470439} = {292B4B6C-EE17-47FE-838F-30BC3BD66638}
+		{4F5B39B7-6EC1-49D8-9D4F-E3D6F4AD02B9} = {2DD474CA-AEE3-47C5-AAE4-0BBC9EC1E20C}
+		{60A63E56-9A3A-4167-BA45-7ABBF3B36663} = {2DD474CA-AEE3-47C5-AAE4-0BBC9EC1E20C}
+		{88885D00-AC3A-4EDE-9335-0FA4A2CAF5CB} = {2DD474CA-AEE3-47C5-AAE4-0BBC9EC1E20C}
+		{C741C17E-469E-4AF3-B48F-F8ABB76C01F1} = {515DB732-0B80-43BF-9B99-447CD43D8ACA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D712498-1C1D-47B1-A703-09199FDD006B}
+	EndGlobalSection
+EndGlobal

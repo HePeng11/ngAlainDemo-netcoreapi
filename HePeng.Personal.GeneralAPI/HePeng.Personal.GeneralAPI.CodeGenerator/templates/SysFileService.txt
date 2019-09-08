@@ -1,0 +1,24 @@
+﻿using Common.Jwt;
+using HePeng.Personal.Common.CoreHelpers;
+using HePeng.Personal.Model.Dto;
+using HePeng.Personal.Model.Dto.QueryParams;
+using HePeng.Personal.Model.Entity;
+using HePeng.Personal.Repository.Interface;
+using HePeng.Personal.Service.Interface;
+using System;
+
+namespace HePeng.Personal.Service.Implement
+{
+    /// <summary>
+    /// {{Scope_Description}}服务层实现
+    /// </summary>
+    public class {{Scope_Name}}Service : BaseService<{{Scope_Name}}, QueryParam>, I{{Scope_Name}}Service
+    {
+        I{{Scope_Name}}Repository {{Scope_Name}}Repository { get; }
+        public {{Scope_Name}}Service(I{{Scope_Name}}Repository {{Scope_Name_firstLower}}Repository)
+        {
+            Repository = {{Scope_Name}}Repository = {{Scope_Name_firstLower}}Repository;
+        }
+
+    }
+}

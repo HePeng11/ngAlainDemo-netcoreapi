@@ -1,0 +1,56 @@
+<div class="my-md">
+  <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+    <button type="button" [disabled]="!role.id" (click)="bindUser()" nzType="primary" acl [acl-ability]="ability_CUD"
+      nz-button>
+      <i nz-icon type="team"></i>分配</button>
+    <!-- <button type="button" [disabled]="!canBatchDelete()" (click)="batchDelete()" nzType="primary" acl
+      [acl-ability]="ability_CUD" nz-button>
+      <i nz-icon type="ngZorro_userRemove"></i>移除</button> -->
+  </sf>
+</div>
+<div class="my-md">
+  <nz-alert [nzType]="'info'" [nzShowIcon]="true" [nzMessage]="message">
+    <ng-template #message>
+      已选择 <strong class="text-primary">{{getCheckIds().length}}</strong> 项
+      <a *ngIf="getCheckIds().length>0" (click)="batchDelete()" class="ml-md" acl [acl-ability]="ability_CUD"><i nz-icon nzType="ngZorro_userRemove"></i> 批量移除</a>
+    </ng-template>
+  </nz-alert>
+</div>
+<nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzFrontPagination]="false" [nzData]="listOfData" [nzShowTotal]="showTotalTpl"
+  [nzLoading]="loading" [nzTotal]="total" [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize"
+  (nzPageIndexChange)="searchData()" (nzPageSizeChange)="searchData(true)" [nzScroll]="{ x: '400px'  }">
+  <thead (nzSortChange)="sort($event)" nzSingleSort>
+    <tr>
+      <th nzWidth="5%" nzShowCheckbox (nzCheckedChange)="checkAll($event)" [nzIndeterminate]="isIndeterminate"
+        [(nzChecked)]="isAllDataChecked"></th>
+      <th nzWidth="5%">No</th>
+      <th nzWidth="10%">用户名</th>
+      <th nzWidth="10%">头像</th>
+      <th nzWidth="10%">姓名</th>
+      <th nzWidth="10%">性别</th>
+      <th nzWidth="20%">电话号码</th>
+      <th nzWidth="10%" acl [acl-ability]="ability_CUD">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of ajaxTable.data;let i=index">
+      <td nzShowCheckbox [(nzChecked)]="checkedIds[data.roleUserId]" (nzCheckedChange)="refreshThStatus()"></td>
+      <td>{{ pageNo+i }}</td>
+      <td>{{ data.account }}</td>
+      <td>
+        <img [src]="data.headImgUrl" />
+      </td>
+      <td>
+        <ellipsis length="10" tooltip>{{ data.name }}</ellipsis>
+      </td>
+      <td>{{ data.gender }}</td>
+      <td>{{ data.phone }}</td>
+      <td acl [acl-ability]="ability_CUD">
+        <a href="###" (click)="delete([data.roleUserId])"><i nz-icon nzType="ngZorro_userRemove"></i> 移除</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<ng-template #showTotalTpl let-range="range" let-total>
+  {{ range[0] }}-{{ range[1] }} / {{ total }}
+</ng-template>

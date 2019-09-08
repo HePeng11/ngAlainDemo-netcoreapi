@@ -1,0 +1,15 @@
+<page-header [title]="null" autoTitle="false"></page-header>
+
+<div nz-row style="min-width: 1000px">
+  <div nz-col nzSpan="9">
+    <nz-card nzTitle="角色">
+      <app-sys-role-table #roleTable (clickRow)="choosed($event)"></app-sys-role-table>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="15">
+    <nz-card [nzTitle]="(roleInfo?roleInfo.name+'-':'')+'用户'">
+      <app-sys-role-user-table #roleUserTable [role]="roleInfo"></app-sys-role-user-table>
+    </nz-card>
+  </div>
+</div>

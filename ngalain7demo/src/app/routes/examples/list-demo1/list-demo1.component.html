@@ -1,0 +1,45 @@
+<page-header [action]="phActionTpl">
+  <ng-template #phActionTpl>
+    <button nz-button nzType="primary">新建</button>
+  </ng-template>
+</page-header>
+
+<nz-card>
+
+  <sf #sf mode="search" [schema]="searchSchema" [button]="null">
+    <button type="submit" [nzType]="'primary'" nz-button><i nz-icon type="search"></i>搜索</button>
+    <button type="reset" nzShape="round" nz-button>重置</button>
+  </sf>
+
+  <div class="my-md">
+    <nz-alert [nzType]="'info'" [nzShowIcon]="true" [nzMessage]="message">
+      <ng-template #message>
+        已选择
+        <strong class="text-primary">{{numberOfChecked}}</strong> 项
+        <a *ngIf="numberOfChecked > 0" (click)="operateData()" class="ml-lg">清空</a>
+      </ng-template>
+    </nz-alert>
+  </div>
+
+  <nz-table #rowSelectionTable nzShowPagination nzShowSizeChanger [nzData]="listOfAllData"
+    (nzCurrentPageDataChange)="currentPageDataChange($event)">
+    <thead>
+      <tr>
+        <th nzShowCheckbox [(nzChecked)]="isAllDisplayDataChecked" [nzIndeterminate]="isIndeterminate"
+          (nzCheckedChange)="checkAll($event)"></th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of rowSelectionTable.data">
+        <td nzShowCheckbox [(nzChecked)]="mapOfCheckedId[data.id]" [nzDisabled]="data.disabled"
+          (nzCheckedChange)="refreshStatus()"></td>
+        <td>{{ data.name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.address }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</nz-card>

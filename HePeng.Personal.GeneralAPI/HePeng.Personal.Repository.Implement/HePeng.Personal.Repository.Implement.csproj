@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HePeng.Personal.Model.Entity\HePeng.Personal.Model.Entity.csproj" />
+    <ProjectReference Include="..\HePeng.Personal.Repository.Interface\HePeng.Personal.Repository.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

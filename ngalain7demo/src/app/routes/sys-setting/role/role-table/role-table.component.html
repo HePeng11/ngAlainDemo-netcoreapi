@@ -1,0 +1,37 @@
+<div class="my-md">
+  <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+    <button *ngIf="!viewMode" type="button" (click)="add({})" nzType="primary" class="primary-bg-add" acl
+      [acl-ability]="ability_CUD" nz-button>
+      <i nz-icon type="plus"></i></button>
+  </sf>
+</div>
+<nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzFrontPagination]="false" [nzData]="listOfData"
+  [nzLoading]="loading" [nzTotal]="total" [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize"
+  (nzPageIndexChange)="searchData()" (nzPageSizeChange)="searchData(true)" [nzScroll]="{ x: '300px' }">
+  <thead (nzSortChange)="sort($event)" nzSingleSort>
+    <tr>
+      <th nzWidth="5%"></th>
+      <th>名称</th>
+      <th>描述</th>
+      <th *ngIf="!viewMode" acl [acl-ability]="ability_CUD">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of ajaxTable.data;let i=index" (click)="showRoleUserData(data,$event)"
+      [ngClass]="{'choosed':choosedRoleId == data.id}">
+      <td nzWidth="5%">{{ pageNo+i }}</td>
+      <td *ngIf="!viewMode">{{ data.name }}</td>
+      <td *ngIf="viewMode">
+        <a href="###" (click)="showRoleUsersWindow(data)">{{ data.name }}</a>
+      </td>
+      <td>
+        <ellipsis length="5" tooltip>{{ data.description }}</ellipsis>
+      </td>
+      <td *ngIf="!viewMode" acl [acl-ability]="ability_CUD">
+        <a href="###" (click)="add(data)"><i nz-icon nzType="edit" nzTheme="fill"></i> Edit</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a href="###" (click)="delete(data)"><i nz-icon nzType="delete" nzTheme="fill"></i> Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

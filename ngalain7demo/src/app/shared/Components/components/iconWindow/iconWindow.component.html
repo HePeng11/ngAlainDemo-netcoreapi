@@ -1,0 +1,19 @@
+<div style="width: 90%">
+  <nz-list [nzDataSource]="list" [nzRenderItem]="item" [nzSize]='"large"'
+    [nzGrid]="{ gutter: 40, xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
+    <ng-template #item let-item>
+
+      <nz-list-item>
+        <nz-card (click)='choose(item.name)' [ngClass]="{'choosed':item.name == value}">
+          <div style="width:80px;height:50px" >
+            <i nz-icon [type]="item.name" style="font-size: 18px"></i>
+            <p>
+              <ellipsis>{{item.name}}</ellipsis>
+            </p>
+          </div>
+        </nz-card>
+
+      </nz-list-item>
+    </ng-template>
+  </nz-list>
+</div>

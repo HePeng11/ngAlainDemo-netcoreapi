@@ -1,0 +1,510 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Implement\\HePeng.Personal.Service.Implement.csproj": {}
+  },
+  "projects": {
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj",
+        "projectName": "HePeng.Personal.Common",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj",
+        "projectName": "HePeng.Personal.Model.Dto",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj",
+        "projectName": "HePeng.Personal.Model.Entity",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\HePeng.Personal.Model.Enum.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\HePeng.Personal.Model.Enum.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\SqlSugar.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\SqlSugar.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\HePeng.Personal.Model.Enum.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\HePeng.Personal.Model.Enum.csproj",
+        "projectName": "HePeng.Personal.Model.Enum",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\HePeng.Personal.Model.Enum.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Enum\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\HePeng.Personal.Repository.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\HePeng.Personal.Repository.Interface.csproj",
+        "projectName": "HePeng.Personal.Repository.Interface",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\HePeng.Personal.Repository.Interface.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Entity\\HePeng.Personal.Model.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Implement\\HePeng.Personal.Service.Implement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Implement\\HePeng.Personal.Service.Implement.csproj",
+        "projectName": "HePeng.Personal.Service.Implement",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Implement\\HePeng.Personal.Service.Implement.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Implement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\HePeng.Personal.Repository.Interface.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Repository.Interface\\HePeng.Personal.Repository.Interface.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\HePeng.Personal.Service.Interface.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\HePeng.Personal.Service.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\HePeng.Personal.Service.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\HePeng.Personal.Service.Interface.csproj",
+        "projectName": "HePeng.Personal.Service.Interface",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\HePeng.Personal.Service.Interface.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Service.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Common\\HePeng.Personal.Common.csproj"
+              },
+              "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj": {
+                "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\HePeng.Personal.Model.Dto\\HePeng.Personal.Model.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\SqlSugar.csproj": {
+      "version": "4.9.9.10",
+      "restore": {
+        "projectUniqueName": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\SqlSugar.csproj",
+        "projectName": "SqlSugar",
+        "projectPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\SqlSugar.csproj",
+        "packagesPath": "C:\\Users\\peng\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\remoteSvn\\HePeng.Personal.GeneralAPI\\SqlSugar\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\peng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.18.3, )"
+            },
+            "System.Data.Common": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

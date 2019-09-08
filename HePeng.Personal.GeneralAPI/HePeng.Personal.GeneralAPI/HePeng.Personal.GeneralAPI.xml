@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HePeng.Personal.GeneralAPI</name>
+    </assembly>
+    <members>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController">
+            <summary>
+            SysACLCategory
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController.#ctor(HePeng.Personal.Service.Interface.ISysACLCategoryService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="sysACLCategoryService"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController.Add(HePeng.Personal.Model.Entity.SysACLCategory)">
+            <summary>
+            新增
+            </summary>
+            <param name="sysACLCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController.Update(System.Int32,HePeng.Personal.Model.Entity.SysACLCategory)">
+            <summary>
+            Update
+            </summary>
+            <param name="id"></param>
+            <param name="sysACLCategory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLCategoryController.Query(HePeng.Personal.Model.Dto.QueryParams.CommonQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.ACLController">
+            <summary>
+            SysACL
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLController.#ctor(HePeng.Personal.Service.Interface.ISysACLService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="sysACLService"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLController.Add(HePeng.Personal.Model.Entity.SysACL)">
+            <summary>
+            新增
+            </summary>
+            <param name="sysACL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLController.Update(System.Int32,HePeng.Personal.Model.Entity.SysACL)">
+            <summary>
+            Update
+            </summary>
+            <param name="id"></param>
+            <param name="sysACL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ACLController.Query(HePeng.Personal.Model.Dto.QueryParams.QueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.BaseController">
+            <summary>
+            控制器基类
+            </summary>
+        </member>
+        <member name="P:HePeng.Personal.GeneralAPI.Controllers.BaseController.APIAppsetting">
+            <summary>
+            系统全局配置
+            </summary>
+        </member>
+        <member name="P:HePeng.Personal.GeneralAPI.Controllers.BaseController.UrlPrefix">
+            <summary>
+            服务器URL前缀
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.BaseController.#ctor">
+            <summary>
+            constractor
+            </summary>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.FileController">
+            <summary>
+            user
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.FileController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,HePeng.Personal.Service.Interface.ISysFileService,HePeng.Personal.Service.Interface.ISysFileRelationService)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <param name="sysFileService"></param>
+            <param name="sysFileRelationService"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.FileController.Upload(Microsoft.AspNetCore.Http.IFormCollection,HePeng.Personal.Model.Enum.UploadType)">
+            <summary>
+            上传文件 仅上传，确认时需要调用SaveRelation接口
+            </summary>
+            <param name="formData">表单数据</param>
+            <param name="uploadType">上传类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.FileController.SaveRelation(System.Int32,System.Int32)">
+            <summary>
+            保存文件与业务数据关系
+            </summary>
+            <param name="fileId"></param>
+            <param name="businessId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.MenuController">
+            <summary>
+            menucontroller
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.#ctor(HePeng.Personal.Service.Interface.ISysMenuService)">
+            <summary>
+            
+            </summary>
+            <param name="sysMenuService"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.GetMenus">
+            <summary>
+            获取当前用户菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.GetMenusExcept(System.Int32)">
+            <summary>
+            获取菜单列表
+            菜单管理界面使用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.Query(HePeng.Personal.Model.Dto.QueryParams.SysMenuQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.Update(System.Int32,HePeng.Personal.Model.Entity.SysMenu)">
+            <summary>
+            update
+            </summary>
+            <param name="id"></param>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.Delete(System.Int32)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.MenuController.Add(HePeng.Personal.Model.Entity.SysMenu)">
+            <summary>
+            新增菜单
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.ObjectAclController">
+            <summary>
+            SysObjectAcl
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ObjectAclController.#ctor(HePeng.Personal.Service.Interface.ISysObjectAclService)">
+            <summary>
+            
+            </summary>
+            <param name="sysObjectAclService"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ObjectAclController.Update(HePeng.Personal.Model.Dto.ObjectAclsDto)">
+            <summary>
+            更新角色或用户的权限点集合 权限管理页面
+            </summary>
+            <param name="objectAclsDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ObjectAclController.Query(HePeng.Personal.Model.Dto.QueryParams.SysObjectAclQueryParam)">
+            <summary>
+            全部权限查询 权限管理页面
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ObjectAclController.QueryAclNames">
+            <summary>
+            查询当前用户权限集合 每个用户登录成功后调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.RoleController">
+            <summary>
+            Role
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleController.#ctor(HePeng.Personal.Service.Interface.ISysRoleService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="sysRoleService"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleController.Add(HePeng.Personal.Model.Entity.SysRole)">
+            <summary>
+            新增
+            </summary>
+            <param name="Role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleController.Update(System.Int32,HePeng.Personal.Model.Entity.SysRole)">
+            <summary>
+            Update
+            </summary>
+            <param name="id"></param>
+            <param name="Role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleController.Query(HePeng.Personal.Model.Dto.QueryParams.SysRoleQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.RoleUserController">
+            <summary>
+            RoleUser
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleUserController.#ctor(HePeng.Personal.Service.Interface.ISysRoleUserService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="sysRoleUserService"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleUserController.Add(HePeng.Personal.Model.Entity.SysRoleUser[])">
+            <summary>
+            给角色批量分配用户
+            </summary>
+            <param name="roleUsers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleUserController.Delete(System.Int32[])">
+            <summary>
+            批量删除角色用户
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleUserController.Query(HePeng.Personal.Model.Dto.QueryParams.SysRoleUserQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.RoleUserController.QueryIsNotRole(HePeng.Personal.Model.Dto.QueryParams.SysRoleUserQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.UserController">
+            <summary>
+            user
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.#ctor(HePeng.Personal.Service.Interface.ISysUserService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="sysUserService"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.Login(HePeng.Personal.Model.Dto.LoginParam)">
+            <summary>
+            登录
+            </summary>
+            <param name="loginParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.Query(HePeng.Personal.Model.Dto.QueryParams.SysUserQueryParam)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="queryParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.Add(HePeng.Personal.Model.Entity.SysUser)">
+            <summary>
+            新增
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.Update(System.Int32,HePeng.Personal.Model.Entity.SysUser)">
+            <summary>
+            Update
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.UpdatePassword(System.Int32,System.String)">
+            <summary>
+            UpdatePassword
+            </summary>
+            <param name="id"></param>
+            <param name="password"></param>
+            <returns></returns>
+             'Content-Type', 'application/json'
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.UserController.UpdatePassword(System.String)">
+            <summary>
+            更改当前用户的密码
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+             'Content-Type', 'application/json'
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Controllers.ValuesController">
+            <summary>
+            API示例
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.Get">
+            <summary>
+            get strs
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter">
+            <summary>
+            acl验证 已设置action会覆盖controller的特性
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter.#ctor(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="aclNames"></param>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter.AclAutherationImpl">
+            <summary>
+            acl验证 已设置action会覆盖controller的特性
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter.AclAutherationImpl.#ctor(HePeng.Personal.Service.Interface.ISysObjectAclService,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="sysObjectAclService"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter.AclAutherationImpl.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.AclAutherizationFilter.AclAutherationImpl.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Other.RemoveAclAutherizationFilter">
+            <summary>
+            当controller上存在aclfilter时 移除此action上的acl验证
+            </summary>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Other.SysExceptionFilter">
+            <summary>
+            异常过滤器 
+            暂不使用此系统异常过滤器 已使用了异常中间件
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.SysExceptionFilter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Other.SysExceptionFilter.SysExceptionFilterImpl">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.SysExceptionFilter.SysExceptionFilterImpl.#ctor(HePeng.Personal.Service.Interface.ISysUserService,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="sysUserService"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Other.SysExceptionFilter.SysExceptionFilterImpl.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Program.CreateDefaultBuilder(System.String[])">
+            <summary>
+            CreateDefaultBuilder 源码
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:HePeng.Personal.GeneralAPI.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:HePeng.Personal.GeneralAPI.Startup1">
+            <summary>
+            启动类
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup1.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="env"></param>
+        </member>
+        <member name="P:HePeng.Personal.GeneralAPI.Startup1.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HePeng.Personal.GeneralAPI.Startup1.APIAppsetting">
+            <summary>
+            Configuration 转换得到的配置对象 （注意运行时不会随着Configuration更改）
+            </summary>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup1.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            第一次请求时配置各个实例对象（bean）
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup1.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            This method configure gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:HePeng.Personal.GeneralAPI.Startup1.InjectServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注入服务
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>

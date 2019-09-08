@@ -1,0 +1,67 @@
+<page-header [title]="null" autoTitle="false"></page-header>
+<div nz-row style="min-width: 1000px">
+  <div nz-col nzSpan="9">
+    <nz-card nzTitle="列表">
+      <nz-tabset nzTabPosition="top" nzSize="small" [nzTabBarStyle]="{padding:'0px 0px 0px -20px'}">
+        <nz-tab nzTitle="角色">
+          <div>
+            <app-sys-role-table (clickRow)="choosed($event,1)" [viewMode]="true">
+            </app-sys-role-table>
+          </div>
+        </nz-tab>
+
+        <nz-tab nzTitle="用户">
+          <app-sys-user-simple-list (clickRow)="choosed($event,2)"></app-sys-user-simple-list>
+        </nz-tab>
+      </nz-tabset>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="15">
+    <nz-card [nzTitle]="(objectInfo.name?objectInfo.name:'')+' 权限'">
+      <div class="my-md">
+        <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+        </sf>
+      </div>
+      <nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzFrontPagination]="false" [nzData]="listOfData"
+        [nzLoading]="loading" [nzTotal]="totol" [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize"
+        (nzPageIndexChange)="searchData()" (nzPageSizeChange)="searchData(true)">
+        <thead>
+          <tr>
+            <th nzWidth="2%"></th>
+            <th nzWidth="15%">
+              权限类别
+            </th>
+            <th nzWidth="60%">访问控制列表</th>
+            <th nzWidth="5%" nzShowCheckbox (nzCheckedChange)="checkAll($event,true)"
+              [nzIndeterminate]="getExistTrChecked(ajaxTable.data)" [nzChecked]="getAllTrChecked(ajaxTable.data)"
+              [nzDisabled]="getAclCheckBoxsDisable()"></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let data of ajaxTable.data;let i=index">
+            <td>{{ pageNo+i }}</td>
+            <td>
+              {{ data.name }}
+            </td>
+            <td>
+              <label *ngFor="let acl of data.acLs;" nz-checkbox [(ngModel)]="acl.own"
+                (ngModelChange)="aclChange($event)" nz-tooltip
+                [nzTitle]="acl.description&&acl.description.length>0?titleTemplate:''"
+                [nzDisabled]="getAclCheckBoxsDisable()">
+                {{ acl.name }}
+                <ng-template #titleTemplate>
+                  <span>{{acl.description}} </span>
+                </ng-template>
+              </label>
+            </td>
+            <td nzShowCheckbox [nzDisabled]="getAclCheckBoxsDisable()" [nzChecked]="getTrAllChecked(data)"
+              (nzCheckedChange)="setTrCheckAll(data,$event,true)" [nzIndeterminate]="getTrExistChecked(data)"></td>
+          </tr>
+
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+
+</div>

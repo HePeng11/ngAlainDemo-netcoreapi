@@ -1,0 +1,39 @@
+<nz-card>
+  <div class="my-md">
+    <sf #sf mode="search" [ui]="ui" [schema]="searchSchema" (formSubmit)="searchData(true)" [button]="null">
+    </sf>
+  </div>
+  <nz-table #ajaxTable nzSize="small" nzBordered nzShowSizeChanger [nzShowTotal]="showTotalTpl"
+    [nzFrontPagination]="false" [nzData]="listOfData" [nzLoading]="loading" [nzTotal]="totol"
+    [(nzPageIndex)]="pageIndex" [(nzPageSize)]="pageSize" (nzPageIndexChange)="searchData()"
+    (nzPageSizeChange)="searchData(true)">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
+      <tr>
+        <th nzWidth="5%"></th>
+        <th>头像</th>
+        <th>用户名</th>
+        <th>姓名</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of ajaxTable.data;let i=index" nz-tooltip [nzTitle]="titleTemplate" nzPlacement="topLeft" (click)="clickTr(data,$event)" [ngClass]="{'choosed':choosedId == data.id}">
+        <td>{{ pageNo+i }}</td>
+        <td>
+          <img [src]="data.headImgUrl" />
+        </td>
+        <td>{{ data.account }}</td>
+        <td>
+          <ellipsis length="10" tooltip>{{ data.name }}</ellipsis>
+        </td>
+        <ng-template #titleTemplate>
+          <span>{{data.name}} {{ data.gender}}</span>
+          <span *ngIf="data.birthday"><br />{{ data.birthday | date:'yyyy-MM-dd'}}</span>
+          <span *ngIf="data.phone&&data.phone.length>0"><br />联系电话:{{ data.phone}}</span>
+        </ng-template>
+      </tr>
+    </tbody>
+    <ng-template #showTotalTpl let-range="range" let-total>
+      <!-- {{ range[0] }}-{{ range[1] }} / {{ total }} -->
+    </ng-template>
+  </nz-table>
+</nz-card>
